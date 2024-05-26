@@ -29,6 +29,7 @@ $color_1: $dark-secondary-color;
   >.tab-content {
     >.tab-item {
       display: none;
+      background: #303030;
     }
     >.tab-item.selected {
       display: block;

@@ -18,6 +18,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\AppsHelpers\AppsHelpers\AppsHelpers.csproj" />
+    <ProjectReference Include="..\..\DateTimesLib\DateTimesLib.csproj" />
+    <ProjectReference Include="..\..\IcotakuScrapper\IcotakuScrapper\IcotakuScrapper.csproj" />
     <ProjectReference Include="..\icotakuscrapperdocumentation.client\icotakuscrapperdocumentation.client.esproj">
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>

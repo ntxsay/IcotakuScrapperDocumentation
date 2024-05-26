@@ -1,0 +1,55 @@
+@import "../../layouts/theme";
+
+$color_1: $dark-secondary-color;
+$color_2: green;
+
+.playground-params-container {
+  min-height: 80px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 8px 10px;
+  input {
+    background: transparent;
+    border: none;
+    font-size: 1em;
+  }
+  button {
+    background: transparent;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    i {
+      color: $color_2;
+    }
+  }
+}
+body.dark-theme {
+  .playground-params-container {
+    background: #303030;
+    color: $color_1;
+    button {
+      color: $color_1;
+    }
+    input[type=url] {
+      color: $color_1;
+    }
+  }
+  
+  .playground-results {
+    background: #303030;
+    color: $color_1;
+    
+    ul {
+      list-style: square;
+      padding: 0;
+      margin: 0 0 20px 28px;
+
+      li {
+        padding: 10px 0;
+      }
+    }
+  }
+}
