@@ -1,0 +1,109 @@
+
+
+#documentation-container {
+  font-family: Roboto, sans-serif;
+  font-size: 1.1em;
+  color: #333;
+  padding: 20px 15px;
+  
+  .documentation-main-header {
+    border: none;
+    margin-bottom: 40px;
+
+    p.description {
+      font-size: 1.03em;
+      font-weight: 400;
+      margin: 4px 0 0 0;
+    }
+
+    & > .title-container {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+
+      .document-title, 
+      .emoji, 
+      h1 {
+        font-size: 2.1em;
+      }
+
+      h1 {
+        margin: 0;
+      }
+    }
+  }
+
+}
+
+//Section ou sous-section d'un document
+.docSection {
+
+  //En tête de section
+  & > .docSection__header   {
+    border: none;
+    margin: 24px 0 16px 0;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  //Section de niveau 1
+  &.--level1 {
+    margin: 60px 0;
+
+    //En-tête de section de niveau 1
+    & > .docSection__header {
+      & > .docSection__header__emoji,
+      & > .docSection__header__title {
+        font-size: 1.65em;
+        font-weight: 600;
+        margin: 0;
+      }
+    }
+  }
+
+  //Section de niveau 2
+  &.--level2 {
+    margin: 30px 0;
+
+    //En-tête de section de niveau 2
+    & > .docSection__header {
+      & > .docSection__header__emoji,
+      & > .docSection__header__title {
+        font-size: 1.37em;
+        font-weight: 600;
+        margin: 0;
+      }
+    }
+  }
+}
+
+
+/******** Playground ********/
+
+.playground-container {
+
+  margin: 20px 0;
+}
+
+.playground-container > .playground-results {
+
+}
+
+.playground-container > .playground-commands {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.playground-container > .playground-commands.grid_1fr_auto_auto {
+  grid-template-columns: 1fr auto auto;
+}
+

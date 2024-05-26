@@ -1,0 +1,50 @@
+@import "../layouts/theme";
+
+$color_1: $dark-secondary-color;
+
+.tab-container {
+  padding: 16px;
+  border-radius: 5px;
+  border: 1px solid $light-quaternary-bg-color;
+  margin: 10px 0;
+  font-size: 1em;
+  >.tab-header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    >.tab-item {
+      background: transparent;
+      padding: 8px 10px;
+      border: none;
+      border-bottom: 4px solid transparent;
+      cursor: pointer;
+    }
+    >.tab-item.selected {
+      border-bottom: 4px solid $light-quaternary-bg-color;
+      cursor: default;
+    }
+  }
+  >.tab-content {
+    >.tab-item {
+      display: none;
+    }
+    >.tab-item.selected {
+      display: block;
+    }
+  }
+}
+body.dark-theme {
+  .tab-container {
+    border: 1px solid $dark-quaternary-bg-color;
+    >.tab-header {
+      >.tab-item {
+        color: $color_1;
+      }
+      >.tab-item.selected {
+        border-bottom: 4px solid $dark-quaternary-bg-color;
+      }
+    }
+  }
+}

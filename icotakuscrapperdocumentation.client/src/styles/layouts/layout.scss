@@ -1,0 +1,268 @@
+@import "theme";
+
+html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  height: calc(100% - 16px);
+  margin: 8px;
+  transition: background-color 0.3s, color 0.3s;
+
+  p, a, h1, h2, h3, h4, h5, h6 {
+    font-family: sans-serif;
+  }
+
+  table th {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid $light-quaternary-bg-color;
+  }
+
+  table td {
+    padding: 12px;
+  }
+}
+
+//Thème clair
+body.light-theme {
+  background-color: $light-primary-bg-color;
+  color: #000000;
+
+  .main-header {
+    border-bottom: 1px solid $light-primary-bg-color-accent;
+  }
+
+  table th {
+    border-bottom: 1px solid $light-quaternary-bg-color;
+  }
+}
+
+// Thème sombre 
+body.dark-theme {
+  background: $dark-primary-bg-color;
+  color: $dark-secondary-color;
+
+  .main-header {
+    border-bottom: 1px solid $dark-primary-bg-color-accent;
+  }
+
+  p, a, i, h1, h2, h3, h4, h5, h6, .emoji, li.section span, 
+  .page-direction, table th, table td{
+    color: $dark-secondary-color;
+  }
+
+  p a {
+    color: $dark-quaternary-bg-color-variant-1;
+  }
+
+  table th {
+    border-bottom: 1px solid $dark-tertiary-color;
+  }
+
+  table tr {
+    border-bottom: 1px solid $dark-tertiary-color;
+  }
+
+}
+
+#root {
+  height: 100%;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  justify-content: center;
+  
+  .main-header {
+    padding-bottom: 8px;
+    border-bottom: 1px solid $dark-secondary-color;
+  }
+}
+
+
+code {
+  overflow-wrap: break-word;
+  word-break: keep-all;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+
+  .logo-container a {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo-container img {
+    width: 50px;
+    display: block;
+  }
+
+  .logo-container span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: block;
+  }
+}
+
+#toggle-theme-btn {
+  border: none;
+  background: transparent;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+#main-container {
+  width: fit-content;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 0;
+}
+
+main {
+  padding: 0 15px;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  gap: 20px;
+}
+
+.full-documentation-navigation {
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 10px;
+      font-family: Roboto, sans-serif;
+      font-size: 1.1em;
+      color: #333;
+
+      a {
+        text-decoration: none;
+      }
+
+      span.emoji {
+        padding-right: 10px;
+        width: 30px;
+        display: inline-block;
+      }
+    }
+
+    li.section {
+      margin-top: 30px;
+      margin-bottom: 10px;
+      font-size: 1em;
+      font-weight: 600;
+      color: black;
+    }
+  }
+}
+
+
+/******** NAVIGATION ********/
+.current-documentation-navigation {
+  ul {
+    list-style-type: none;
+    padding: 0;
+    border-left: 1px solid #e5e5e5;
+
+    li {
+      margin-bottom: 10px;
+      font-family: Roboto, sans-serif;
+      font-size: 1.1em;
+      color: #333;
+      padding: 4px 0 4px 10px;
+
+      a {
+        text-decoration: none;
+      }
+
+      .emoji {
+        padding-right: 10px;
+        display: inline-block;
+        width: 30px;
+      }
+    }
+
+    li.selected {
+      border-left: 1px solid #346DDB;
+    }
+
+    li.title_1 {
+      font-weight: 600;
+      padding-left: 10px;
+    }
+
+    li.title_2 {
+      padding-left: 50px;
+    }
+
+    li.title_3 {
+      padding-left: 90px;
+    }
+
+  }
+}
+
+#documentation-container {
+  overflow-y: auto;
+}
+
+@media (max-width: 1024px) {
+  main {
+    grid-template-columns: none;
+    grid-template-rows: auto auto auto;
+  }
+
+  .full-documentation-navigation {
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 1365px) {
+  #documentation-container {
+    grid-template-columns: 1fr;
+  }
+
+  .current-documentation-navigation {
+    display: none;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+  main {
+    max-width: 1440px;
+  }
+}
+
+@media (min-width: 1920px) and (max-width: 2299px) {
+  main {
+    max-width: 1600px;
+  }
+}
+
+@media (min-width: 2300px) and (max-width: 2559px) {
+  main {
+    max-width: 1920px;
+  }
+}
+
+@media (min-width: 2560px) {
+  main {
+    max-width: 2100px;
+  }
+}

@@ -1,0 +1,28 @@
+@use "sass:meta";
+$dark-primary-bg-color: #35374B;
+$dark-primary-bg-color-accent: #2E2F41;
+$dark-secondary-bg-color: #344955;
+$dark-tertiary-bg-color: #50727B;
+$dark-quaternary-bg-color: #78A083;
+$dark-quaternary-bg-color-variant-1: #A0BBA7;
+$dark-quinary-bg-color: #6B7A8F;
+$dark-primary-color: #FFFFFF;
+$dark-secondary-color: #E0E0E0;
+$dark-tertiary-color: #B0B0B0;
+$dark-quaternary-color: #808080;
+$dark-quinary-color: #606060;
+
+
+$light-primary-bg-color: #FFFFFF;
+$light-primary-bg-color-accent: #F0F0F0;
+$light-secondary-bg-color: #E0E0E0;
+$light-tertiary-bg-color: #D0D0D0;
+$light-quaternary-bg-color: #A0A0A0;
+$light-quinary-bg-color: #B0B0B0;
+
+body.light-theme {
+  @include meta.load-css("highlight.js/styles/vs.min.css");
+}
+body.dark-theme {
+  @include meta.load-css("highlight.js/styles/vs2015.min.css");
+}

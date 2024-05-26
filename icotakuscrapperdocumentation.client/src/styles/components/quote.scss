@@ -1,0 +1,19 @@
+@import "../layouts/theme";
+
+blockquote.quote-container {
+  border-left: 4px solid #ededed;
+  padding: 10px 14px;
+  margin: 20px 0;
+  
+  &.quote-container {
+    p {
+      margin: 0;
+    }
+  }
+}
+
+body.dark-theme {
+  blockquote.quote-container {
+    border-left: 4px solid $dark-quinary-bg-color;
+  }
+}
